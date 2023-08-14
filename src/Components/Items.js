@@ -1,6 +1,4 @@
-
 import React, { useState } from 'react';
-
 export default function Items(props) {
   const [done, setDone] = useState(false);
   const [editing, setEditing] = useState(false);
@@ -26,6 +24,11 @@ export default function Items(props) {
   return (
     <div className={`select-none cursor-pointer w-full border-b-4 overflow-auto mb-4 p-3 flex justify-between items bg-blue-600 hover:bg-blue-500 py-4 rounded-lg shadow-xl border-gray-400`}>
       <div className=''>
+        <div>
+          <span className='text-xs sm:text-xs flex flex-wrap xl:text-xl 2xl:text-2xl h-font-mono font-semibold '>
+            {props.time}
+          </span>
+        </div>
         <span className={`text-xs sm:text-2xl flex flex-wrap xl:text-3xl 2xl:text-3xl h-font-mono `}>
           {editing ? (
             <input
